@@ -1,0 +1,140 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@media screen and ( max-width: 400px ){
+
+}
+
+@media screen and ( max-width: 800px ){
+
+    .pagination{
+        li.page-item {
+
+            display: none;
+            .text-label{
+                display: none;
+            }
+        }
+
+        .page-item:first-child,
+        .page-item:nth-child( 2 ),
+        .page-item:nth-last-child( 2 ),
+        .page-item:last-child,
+        .page-item.active,
+        .page-item.disabled {
+
+            display: block;
+        }
+
+        .page-item.active + .page-item{
+            display: block;
+        }
+
+        .page-item.active + .page-item{
+            display: block;
+        }
+
+        .page-item:has(+ .page-item.active) {
+            display: block;
+        }
+
+        .page-item.disabled:not(:first-child):not(:last-child) {
+            display: none;
+        }
+    }
+}
+
+
+.shake {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.nice-scroll{
+    /* Styling the scrollbar */
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+}
+
+@for $i from 1 through 1000 {
+    .max-height-#{$i} {
+        max-height: #{$i}px;
+    }
+}
+
+@for $i from 1 through 2000 {
+    @if $i%10 == 0 {
+        .max-width-#{$i} {
+            max-width: #{$i}px;
+        }
+    }
+}
+
+@for $i from 1 through 2000 {
+    @if $i%10 == 0 {
+        .min-width-#{$i} {
+            min-width: #{$i}px;
+        }
+    }
+}
+
+@for $i from 1 through 2000 {
+    @if $i%10 == 0 {
+        .width-#{$i} {
+            width: #{$i}px!important;
+        }
+    }
+}
+
+@for $i from 1 through 100 {
+    .border-radius-#{$i} {
+        border-radius: #{$i}px!important;
+    }
+}
+
+@for $i from 1 through 1000 {
+    .margin-top-#{$i} {
+        margin-top: #{$i}px!important;
+    }
+}
+
+.min-width-auto{
+    min-width: auto;
+}
