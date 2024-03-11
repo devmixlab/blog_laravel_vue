@@ -8,3 +8,9 @@ Installation
     <li>sail npm install</li>
     <li>sail npm run build</li>
 </ul>
+
+
+<br />
+
+Page for login /login
+Page for registration /register
