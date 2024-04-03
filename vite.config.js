@@ -5,7 +5,8 @@ import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
     server: {
-        origin: 'http://127.0.0.1:5183',
+        origin: 'http://127.0.0.1:5173',
+        // origin: 'http://127.0.0.1:5183',
     },
     plugins: [
         laravel({
